@@ -9,7 +9,7 @@ public class Movimentation : MonoBehaviour
     public float rotation = 90.0f;
     void Start()
     {
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.lockState = CursorLockMode.Confined;
     }
 
     void Update()
@@ -22,6 +22,6 @@ public class Movimentation : MonoBehaviour
         Vector3 dir = new Vector3(x, 0, y) * velocity;
 
         transform.Translate(dir * Time.deltaTime);
-        transform.Rotate(new Vector3( (mouseY * -1) * rotation * Time.deltaTime, mouseX * rotation * Time.deltaTime, 0));
+        transform.Rotate(new Vector3( 0, mouseX * rotation * Time.deltaTime, 0));
     }
 }
