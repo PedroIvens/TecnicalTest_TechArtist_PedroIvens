@@ -207,9 +207,9 @@ VisualEffect:
   m_Asset: {fileID: 8926484042661614526, guid: eb37cec619e67cf43b916c82d83b3f88, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
+  m_StartSeed: 1581668873
   m_ResetSeedOnPlay: 1
-  m_AllowInstancing: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -546,7 +546,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -5418,9 +5418,9 @@ VisualEffect:
   m_Asset: {fileID: 8926484042661614526, guid: eb37cec619e67cf43b916c82d83b3f88, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
-  m_ResetSeedOnPlay: 0
-  m_AllowInstancing: 1
+  m_StartSeed: 1183202946
+  m_ResetSeedOnPlay: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -5708,6 +5708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d5a82ecf902fd4da5616816b7a0688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directorTL: {fileID: 0}
 --- !u!199 &116217884
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5799,7 +5800,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -10656,7 +10657,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -15569,6 +15570,7 @@ GameObject:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
+  - component: {fileID: 410087043}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -15597,10 +15599,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.5
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -15646,13 +15648,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21192662, y: -0.7841198, z: 0.36564103, w: 0.45447752}
+  m_LocalRotation: {x: 0.04265045, y: -0.70581937, z: 0.23137796, w: 0.66817987}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -119.807, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.558, y: -90, z: 15.642}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15676,6 +15678,27 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!95 &410087043
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410087039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &468530157
 GameObject:
   m_ObjectHideFlags: 0
@@ -15686,6 +15709,8 @@ GameObject:
   m_Component:
   - component: {fileID: 468530158}
   - component: {fileID: 468530159}
+  - component: {fileID: 468530161}
+  - component: {fileID: 468530160}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -15702,8 +15727,8 @@ Transform:
   m_GameObject: {fileID: 468530157}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 18.373, y: 7.95, z: -4.38}
+  m_LocalScale: {x: 1.1911112, y: 6.3411546, z: 4.1212373}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 621778491}
@@ -15737,6 +15762,8 @@ PlayableDirector:
     value: {fileID: 6755036}
   - key: {fileID: 5661590368248681649, guid: 47cdb9c5b71258b4f8f41c4aa4f08989, type: 2}
     value: {fileID: 2058788887}
+  - key: {fileID: 1100876672760240487, guid: 47cdb9c5b71258b4f8f41c4aa4f08989, type: 2}
+    value: {fileID: 410087043}
   m_ExposedReferences:
     m_References:
     - 0ac6280feeb902b43a1eebec091c6501: {fileID: 250349471}
@@ -15744,6 +15771,40 @@ PlayableDirector:
     - e1a137da1c9e836438867abb8b262077: {fileID: 1123457232}
     - 95fa057ce34f0ce41b4fbee9fcf74742: {fileID: 1697167750}
     - 9e19c08c6a8ba264e9d7f453210ba3be: {fileID: 2137133590}
+--- !u!65 &468530160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468530157}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &468530161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468530157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d5a82ecf902fd4da5616816b7a0688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directorTL: {fileID: 468530159}
 --- !u!1 &503714749
 GameObject:
   m_ObjectHideFlags: 0
@@ -16255,6 +16316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d5a82ecf902fd4da5616816b7a0688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directorTL: {fileID: 0}
 --- !u!199 &753517320
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -16346,7 +16408,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -21188,6 +21250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d5a82ecf902fd4da5616816b7a0688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directorTL: {fileID: 0}
 --- !u!199 &1095289659
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -21279,7 +21342,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -26169,7 +26232,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -31140,6 +31203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d5a82ecf902fd4da5616816b7a0688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directorTL: {fileID: 0}
 --- !u!199 &1548464705
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -31231,7 +31295,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -36033,9 +36097,9 @@ VisualEffect:
   m_Asset: {fileID: 8926484042661614526, guid: eb37cec619e67cf43b916c82d83b3f88, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
+  m_StartSeed: 2107462049
   m_ResetSeedOnPlay: 1
-  m_AllowInstancing: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -36362,9 +36426,9 @@ VisualEffect:
   m_Asset: {fileID: 8926484042661614526, guid: eb37cec619e67cf43b916c82d83b3f88, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
+  m_StartSeed: 1927119268
   m_ResetSeedOnPlay: 1
-  m_AllowInstancing: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -36744,9 +36808,9 @@ VisualEffect:
   m_Asset: {fileID: 8926484042661614526, guid: eb37cec619e67cf43b916c82d83b3f88, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
+  m_StartSeed: 514266090
   m_ResetSeedOnPlay: 1
-  m_AllowInstancing: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -37090,7 +37154,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -41943,7 +42007,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:

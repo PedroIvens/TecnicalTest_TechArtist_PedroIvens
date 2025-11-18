@@ -10,20 +10,21 @@ public class Interaction : MonoBehaviour
 
     void Update()
     {
-        if(!Input.GetMouseButtonDown(0))
+        if (!Input.GetMouseButtonDown(0))
             return;
-        
+        Debug.Log("Click!");
         this.ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if(!Physics.Raycast(this.ray, out this.hit))
             return;
-        
+        Debug.Log("RayCast");
         Debug.Log(this.hit.transform.name);
 
-        Activate_VFX activate_VFX = this.hit.transform.GetComponent<Activate_VFX>();
-        if(activate_VFX)
+        Activate_TL director = this.hit.transform.GetComponent<Activate_TL>();
+        if(director)
         {
-            activate_VFX.ActivateVFX();
+            Debug.Log("VFXActivate!");
+            director.ActivateTL();
         }
     }
 }
