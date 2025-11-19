@@ -10,7 +10,6 @@ public class Activate_TL : MonoBehaviour
 
     public void ActivateTL()
         {
-            PlayableDirector director = directorTL.GetComponent<PlayableDirector>();
         directorTL.Play();
         Debug.Log("Timeline_Activated!");
         }
